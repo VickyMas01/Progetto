@@ -1,0 +1,197 @@
+body{
+    margin: 0;
+  width: 100vw;
+  height: 100vh;
+  background: white;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  place-items: center;
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url("../Images/bg.png");
+  background-repeat: repeat-x repeat-y  ;
+  background-size: 80px 80px;
+}
+
+.logo{
+    position: relative;    
+    background-image: url("../Images/logo.png");
+    width: 600px; height: 150px;
+    
+}
+
+.title{
+    font-size: 30px;
+    color: rgb(211, 133, 77);
+
+    -webkit-animation: fadein 3s; 
+    -moz-animation: fadein 3s; 
+     -ms-animation: fadein 3s; 
+      -o-animation: fadein 3s; 
+         animation: fadein 3s
+}
+.container{
+    position: relative;
+    width: 350px;
+    height: 500px;
+    border-radius: 20px;
+    padding: 15px;
+    box-sizing: border-box;
+    background: #ecf0f3;
+    box-shadow: 2px 2px grey;
+    margin-left: 150px;
+
+    -webkit-animation: fadein 1s; 
+    -moz-animation: fadein 1s;
+     -ms-animation: fadein 1s; 
+      -o-animation: fadein 1s; 
+         animation: fadein 1s
+  
+}
+
+.name{
+    position:relative;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+
+    -webkit-animation: fadein 4s; 
+    -moz-animation: fadein 4s;
+     -ms-animation: fadein 4s; 
+      -o-animation: fadein 4s; 
+         animation: fadein 4s
+}
+.nIn{
+    border-radius: 15px;
+    border-color: rgb(204, 137, 29);
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 250px;
+    height: 35px;
+
+    -webkit-animation: fadein 4s; 
+    -moz-animation: fadein 4s;
+     -ms-animation: fadein 4s; 
+      -o-animation: fadein 4s; 
+         animation: fadein 4s
+}
+
+.email{
+    position:relative;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+
+    -webkit-animation: fadein 4s; 
+    -moz-animation: fadein 4s;
+     -ms-animation: fadein 4s; 
+      -o-animation: fadein 4s; 
+         animation: fadein 4s
+}
+.eIn{
+    border-radius: 15px;
+    border-color: rgb(204, 137, 29);
+    margin-bottom: 20px;
+    width: 250px;
+    height: 35px;
+
+    -webkit-animation: fadein 4s; 
+    -moz-animation: fadein 4s;
+     -ms-animation: fadein 4s; 
+      -o-animation: fadein 4s; 
+         animation: fadein 4s
+}
+
+.password{
+    position:relative;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+
+    -webkit-animation: fadein 4s; 
+    -moz-animation: fadein 4s;
+     -ms-animation: fadein 4s; 
+      -o-animation: fadein 4s; 
+         animation: fadein 4s
+}
+.pIn{
+    border-radius: 15px;
+    border-color: rgb(204, 137, 29);
+    margin-bottom: 30px;
+    width: 250px;
+    height: 35px;
+
+    -webkit-animation: fadein 4s; 
+    -moz-animation: fadein 4s;
+     -ms-animation: fadein 4s; 
+      -o-animation: fadein 4s; 
+         animation: fadein 4s
+}
+
+.submit{
+    color: white;
+    background: rgb(204, 137, 29);;
+    height: 40px;
+    border-radius: 20px;
+    font-weight: 700;
+    width: 150px;
+   border-bottom: none;
+   border-top: none;
+   border-left: none;
+   border-right: none;
+   margin-bottom: 5px;
+
+   -webkit-animation: fadein 4s; 
+    -moz-animation: fadein 4s;
+     -ms-animation: fadein 4s; 
+      -o-animation: fadein 4s; 
+         animation: fadein 4s
+
+}
+.submit:hover{
+    cursor: pointer;
+}
+
+a:link{
+    color:black;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: small;
+}
+a:visited{
+    color:black;
+}
+a:hover{
+    color:rgb(204, 137, 29);
+    text-shadow: 1px 1px black;
+}
+
+
+
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+

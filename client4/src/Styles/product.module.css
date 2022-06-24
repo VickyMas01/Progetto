@@ -1,0 +1,15 @@
+.prodList{
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.card{
+    position: relative;
+    left: 40px;
+    margin: 40px;
+    width:200px;
+    height:500px;
+    background: rgb(107, 87, 87);
+}
+    
