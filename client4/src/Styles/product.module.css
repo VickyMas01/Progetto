@@ -6,10 +6,90 @@
 
 .card{
     position: relative;
-    left: 40px;
+    left: 10px;
     margin: 40px;
-    width:200px;
-    height:500px;
-    background: rgb(107, 87, 87);
+    width:240px;
+    height:320px;
+    background: rgb(232, 93, 93);
+    border-radius: 20px;
+    box-shadow: 0px 1px 1px 1px  grey;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.image{
+    position: absolute;
+    top: 35px;
+    left: 45px;
+    border-radius: 20px;
+    width: 150px;
+    height:150px;
+}
+
+.title{
+    position: center;
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0px 1px black;
+}
+
+.price{
+    position: relative;
+    top: 170px;
+    color: white;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.description{
+    margin-top: 15px;
+    position:relative;
+    top: 155px;
+    color: white;
+    text-shadow: 0px 1px black;
+
+}
+
+.ingredients{
+    position: relative;
+    left: 5px;
+    top:160px;
+    color: white;
+    text-shadow: 0px 1px black;
 }
     
+.isIn{
+    position: absolute;
+    left: 5px;
+    display: flex;
+    top:298px;
+    width: 240px;
+}
+.in{
+    color:green;
+    text-shadow:1px 1px 1px   white;
+}
+.notIn{
+    color:rgb(131, 0, 0);
+    text-shadow:1px 1px 1px   white;
+
+}
+
+.addToOrder{
+    position:absolute;
+    top: -22px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    background-color:rgb(248, 50, 50) ;
+    border-radius: 100%;
+    font-size: 25px;
+    font-weight: bolder;
+    color:white;
+    border-style: none;
+    box-shadow: 0px 1px 1px 1px red;
+    
+}
+.addToOrder:hover{
+    cursor: pointer;
+}

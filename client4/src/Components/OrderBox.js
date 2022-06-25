@@ -10,7 +10,7 @@ export default class OrderBox extends React.Component {
     render() {
         return (
             <div>
-                {this.props.order === '' ? <div>Ancora nessun ordine effettuato</div> :
+                {this.props.order.lenght === 0 ? <div>Ancora nessun ordine effettuato</div> :
                     <div>
                         <h1>Ordine di {this.props.user}</h1>
                         <p>Prodotti ordinati : {this.props.order.products.map(e =>e.title).join(', ')}</p>

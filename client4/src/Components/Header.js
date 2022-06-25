@@ -36,7 +36,6 @@ class Header extends React.Component{
                                      <span>Bentornato, {this.state.agent}</span>
                                     }
                             </li>
-                            <li><button className={style.menu} onClick={this.handleMenu}>Menù</button></li>
                             <li>
                             {this.state.isAdmin ? <button className={style.ordine} onClick={this.handleOrdini}>Ultimi ordini</button> : 
                                this.state.isChef ? <button className={style.ordine} onClick={this.handleOrdini}>Ordini in arrivo</button> :

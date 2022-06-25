@@ -71,19 +71,28 @@ export default class Client extends React.Component {
         counter1++
         const op = counter1 % 2;
         if (op === 1) {
-            this.setState({cartOpened: true})
+            if(this.state.orderOpened){this.handleClick2()}
+            this.setState({cartOpened: true});
+            document.getElementById("change").style.width="60vw";
+            
+        
         } else {
-            this.setState({cartOpened: false})
+            this.setState({cartOpened: false});
+            document.getElementById("change").style.width="100vw"
+        
         }
     }
-
+    //document.getElementById(id).style.property = new style
     handleClick2() {
         counter2++
         const op = counter2 % 2;
         if (op === 1) {
-            this.setState({orderOpened: true})
+            if(this.state.cartOpened){this.handleClick1()}
+            this.setState({orderOpened: true});
+                document.getElementById("change").style.width="60vw";
         } else {
-            this.setState({orderOpened: false})
+            this.setState({orderOpened: false});
+                document.getElementById("change").style.width="100vw";
         }
     }
 
@@ -135,10 +144,6 @@ export default class Client extends React.Component {
             }
 
         } 
-
-        if(arr.length !==0){
-            this.setState({alreadyOrder: true})
-        }
         arr=[];
         vett=[];
         sum=0;
@@ -152,33 +157,44 @@ export default class Client extends React.Component {
     render() {
         return (
             <div>
-            {sessionStorage.length === 0 ? <></>:
+             {sessionStorage.length === 0 ? <></>:
                 <Header username={JSON.parse(sessionStorage.getItem('utente')).details.username}
                         isAdmin={JSON.parse(sessionStorage.getItem('utente')).details.isAdmin}
                         isChef={JSON.parse(sessionStorage.getItem('utente')).details.isChef}/>}
-            
-            {this.state.cartOpened &&
-            <div>
-                <span>Carrello</span>
-                <ul>
-                    {this.state.prods}
-                </ul>
-                <div>Prezzo totale: <span>{this.state.total}</span></div>
-                <button onClick={this.handlePurchase}>Conferma Ordine</button>
-          </div>}
-            
-                <button className={style.cart} onClick={this.handleClick1}></button>
-                <p className={style.counter}>{this.state.prods.length}</p>
-                <button className={style.order} onClick={this.handleClick2}>Il mio ordine</button>
-                <div className={style.main}>
-                <ProductList onChange={this.handleOther} admin={false}/>
-                 {this.state.orderOpened &&
-                    <OrderBox orders={this.state.order} />}
-                </div>
-                
-            
+              <button className={style.cart} onClick={this.handleClick1}></button>
 
-        </div>
+              <p className={style.counter}>{this.state.prods.length}</p>
+              <button className={style.order} onClick={this.handleClick2}>Il mio ordine</button>
+
+               <div id="change" className={style.main}>
+                  {this.state.cartOpened &&
+                   <div className={style.cartSection}>
+                      <span className={style.cartitle}>Carrello</span>
+                      {this.state.alreadyOrder ? <p className={style.wait}>Hai già un ordine in corso,attendi</p>:
+                         <>
+                            {this.state.prods.length > 0 ?<>
+                            <span className={style.recap}>Riepilogo</span>
+                            <div className={style.total}>Totale: <span>{this.state.total} €</span></div>
+                            <button className={style.agree} onClick={this.handlePurchase}>Conferma Ordine</button></> :
+                              <div className={style.noProd}>Nessun articolo nel carrello</div>
+                            }
+                            <ul className={style.cartList}>
+                            {this.state.prods}
+                           </ul>
+                            
+                         </>
+                       }
+                   </div>}
+            
+                    <ProductList onChange={this.handleOther} admin={false}/>
+                      
+                  
+               </div>
+                      <div className={style.orderStatus}>
+                        {this.state.orderOpened &&
+                         <OrderBox order={this.state.order} user={JSON.parse(sessionStorage.getItem('utente')).details.username}/>}
+                        </div>
+            </div>
         )
-    }
+    }//
 }

@@ -41,20 +41,22 @@ export default class Product extends React.Component{
     render(){
         return(
             <li className={style.card}>
-                <div>{this.props.prod.title}</div>
-                <div><img src={this.props.prod.photo} alt='Immagine prodotto' width='200' height='150'/></div>
-                <div>Ingredienti : {this.props.prod.ingredients}</div>
-                <div>{this.props.prod.desc}</div>
-                <div>{this.props.prod.price} € </div>
+                <div className={style.title}>{this.props.prod.title}</div>
+                  <img src={this.props.prod.photo} alt='Immagine prodotto' className={style.image}/>
+                <div className={style.ingredients}>Ingredienti : {this.props.prod.ingredients}</div>
+                <div className={style.description}>{this.props.prod.desc}</div>
+                <div className={style.price}>{this.props.prod.price} € </div>
+
+                <div className={style.isIn}>
                 {this.props.admin ?
-                    this.props.prod.disp ? <><div>Presente in magazzino</div>
+                    this.props.prod.disp ? <><div className={style.in}>Disponibile</div>
                             <div>
                                 <button onClick={this.handleAdmin}>Aggiorna</button>
                                 <button onClick={this.handleAdmin}>Elimina</button>
                             </div></>
                         :
                         <>
-                        <div>Prodotto esaurito</div>
+                        <div className={style.notIn}>Non disponibile</div>
                     <div>
                         <button onClick={this.handleAdmin}>Aggiorna</button>
                         <button onClick={this.handleAdmin}>Elimina</button>
@@ -62,14 +64,16 @@ export default class Product extends React.Component{
 
                 :
                  this.props.showDisp ?
-                 this.props.prod.disp ? <><div>Presente in magazzino</div>
+                 this.props.prod.disp ? <><div className={style.in}>Disponibile</div>
                     <div>
-                        <button onClick={this.handleClick}>
-                            <img src='https://media.istockphoto.com/vectors/shopping-cart-icon-vector-id1128229893?k=20&m=1128229893&s=612x612&w=0&h=uOQYRr-vTDnW60Mn8MWSwt6i9uK2SGni8jR1CKKELK8=' alt='CLICCA' height='25' width='25'/>
+                        <button className={style.addToOrder} onClick={this.handleClick}>
+                            +
                         </button>
                     </div></>
                     :
-                    <div>Prodotto esaurito</div> : <></>}
+                    <div className={style.notIn}>Non disponibile</div> : <></>}
+                </div>
+                
 
             </li>
 
