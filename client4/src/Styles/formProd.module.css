@@ -1,0 +1,142 @@
+.close{ 
+    position: absolute;
+    right: 20px;
+    top:10px;
+    width: 30px;
+    height: 30px;
+    background-color:rgb(248, 50, 50) ;
+    border-radius: 100%;
+    font-size: 25px;
+    font-weight: bolder;
+    color:white;
+    border-style: none;
+    box-shadow: 0px 1px 1px 1px red;
+    cursor:pointer;
+}
+
+.addTitle{
+    font-size: 30px;
+    font-weight: bolder;
+    margin-bottom:10px;
+}
+
+.name{
+    position:relative;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 40px;
+}
+.nIn{
+    border-radius: 15px;
+    border-color: red;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 250px;
+    height: 35px
+}
+
+
+.ing{
+    position:relative;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 10px;
+
+}
+.iIn{
+    border-radius: 15px;
+    border-color: red;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 250px;
+    height: 35px
+
+}
+
+.desc{
+    position:relative;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 10px;
+
+}
+.dIn{
+    border-radius: 15px;
+    border-color: red;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 250px;
+    height: 35px
+
+}
+
+.urlPh{
+    position:relative;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 10px;
+}
+.phIn{
+    border-radius: 15px;
+    border-color: red;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 250px;
+    height: 35px
+
+}
+
+.price{
+    position:relative;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 10px;
+    
+}
+.pIn{
+    border-radius: 15px;
+    border-color: red;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 250px;
+    height: 35px
+
+}
+
+.isIn{
+    position:relative;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 10px;
+
+}
+
+
+.radioYes{
+    margin-top:15px ;
+
+}
+.radioNo{
+    margin-top:15px ;
+    margin-left: 20px;
+}
+
+.submit{
+    width: 230px;
+    height: 50px;
+    border-radius: 30px;
+    border-width: 0;
+    background-color:red;
+    font-weight: bold;
+    font-size: larger;
+    color: white;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    cursor:pointer;
+}

@@ -65,7 +65,7 @@ export const updateOrder = async(req, res, next) => {
     const orderId = req.params.orderId;
     try {
         const updatedOrder = await Order.findByIdAndUpdate(
-            orderId, { $set: { status: req.body.status } }, { new: true }
+            orderId, { $set: { taken: req.body.taken } }, { new: true }
         );
         res.status(200).json(updatedOrder)
     } catch (err) {

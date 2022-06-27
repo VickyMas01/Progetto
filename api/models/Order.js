@@ -1,14 +1,14 @@
 import mongoose from "mongoose";
 const OrderSchema = new mongoose.Schema({
     user: {
-        type: mongoose.Schema.Types.ObjectID,
+        type: mongoose.Schema.Types.ObjectId,
         ref: "User"
     },
     products: [{
         type: Object,
         required: true
     }],
-    status: {
+    taken: {
         type: String,
         default: "pending"
     },

@@ -3,6 +3,7 @@ import Services from "../Services/services";
 import Header from "../Components/Header";
 import ProductList from "../Components/ProductList";
 import Form from '../Components/Form'
+import style from '../Styles/admin.module.css'
 
 
 
@@ -21,7 +22,8 @@ export default class Admin extends React.Component{
 
         this.handleCheck=this.handleCheck.bind(this)
         this.handleOther=this.handleOther.bind(this)
-        this.handleHide=this.handleHide.bind(this)
+        this.handleHide1=this.handleHide1.bind(this)
+        this.handleHide2=this.handleHide2.bind(this)
         this.handleClick=this.handleClick.bind(this)
     }
 
@@ -46,23 +48,33 @@ export default class Admin extends React.Component{
         if(prod.source.innerHTML==='Aggiorna'){
             this.setState({
                 showUpdate:true,
-                formUpdate: <Form product={prod} hide={this.handleHide} upd={true}/>
-            })
+                formUpdate: <Form product={prod} hide={this.handleHide1} upd={true}/>
+            });
+          document.getElementById("change").style.width="40vw"
         }else{
             prod.source.parentNode.parentNode.remove()
             Services.deleteProduct(prod._id)
         }
         }
 
-        handleHide(){
+        handleHide1(){
         this.setState({
             showUpdate:false,
-            showCreate:false
+
         })
+        document.getElementById("change").style.width="100vw"
         }
 
+    handleHide2(){
+        this.setState({
+            showCreate:false,
 
-        handleClick(){
+        })
+        document.getElementById("change").style.width="100vw"
+    }
+
+
+    handleClick(){
         const prod={
             title:'',
             ingredients:'',
@@ -73,9 +85,9 @@ export default class Admin extends React.Component{
         }
         this.setState({
             showCreate:true,
-            formCreate:<Form product={prod} hide={this.handleHide} upd={false}/>
+            formCreate:<Form product={prod} hide={this.handleHide2} upd={false}/>
         })
-
+        document.getElementById("change").style.width="60vw"
         }
 
 
@@ -85,18 +97,20 @@ export default class Admin extends React.Component{
 
     render(){
         return(
-            <div>
+           <div>
                 {sessionStorage.length === 0 ? <></> :
                     <Header username={JSON.parse(sessionStorage.getItem('utente')).details.username}
                             isAdmin={JSON.parse(sessionStorage.getItem('utente')).isAdmin}
                             isChef={JSON.parse(sessionStorage.getItem('utente')).isChef}/>}
-                <ProductList onChange={this.handleOther} admin={true}/>
-                <button onClick={this.handleClick}>Aggiungi Prodotto</button>
-                <aside>
+               <div id="change" className={style.main}><ProductList onChange={this.handleOther} admin={true}/></div>
+                <button className={style.addProd} onClick={this.handleClick}>Aggiungi Prodotto</button>
+                <div className={style.formProduct}>
                     {this.state.showUpdate && this.state.formUpdate}
                     {this.state.showCreate && this.state.formCreate}
-                </aside>
-            </div>
+                </div>
+                    
+           </div>    
+           
         )
     }
 }

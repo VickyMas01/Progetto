@@ -55,14 +55,12 @@ export default class Client extends React.Component {
     handleGet(){
         Services.getOrder(JSON.parse(sessionStorage.getItem('utente')).details._id)
             .then(data => {
-                console.log(data)
                 if(data.length !== 0){
                     this.setState({
                         order:data[0],
                         alreadyOrder:true
                     })
-                }console.log(this.state.order)
-
+                }
             })
             .catch(e => console.log(e))
     }
@@ -104,7 +102,7 @@ export default class Client extends React.Component {
         cArr.push(c);
         c++;
         const lastPrice = arr.slice(-1)[0].price
-        vett.push(<div id={f}><Product prod={arr.slice(-1)[0]} showDisp={false}/><button onClick={this.handleDelete}>X</button></div>)
+        vett.push(<div id={f}><Product prod={arr.slice(-1)[0]} showDisp={false}/><button className={style.delButt} onClick={this.handleDelete}>X</button></div>)
         this.setState({
             prods:vett
         })
@@ -150,7 +148,6 @@ export default class Client extends React.Component {
         this.setState({prods:[]})
         this.setState({total:0})
         this.setState({alreadyOrder:true})
-        console.log(this.state.order)
     }
 
 

@@ -37,13 +37,12 @@ class Header extends React.Component{
                                     }
                             </li>
                             <li>
-                            {this.state.isAdmin ? <button className={style.ordine} onClick={this.handleOrdini}>Ultimi ordini</button> : 
-                               this.state.isChef ? <button className={style.ordine} onClick={this.handleOrdini}>Ordini in arrivo</button> :
-                               <span />
-                               }
+                           
                             </li>
                             <li><button className={style.logout} onClick={this.handleClick}>Logout </button></li>
                         </ul>
+
+                        
                 </div>
                 )
         }
@@ -54,3 +53,8 @@ class Header extends React.Component{
 }
 
 export default Header
+
+//{this.state.isAdmin ? <button className={style.ordine} onClick={this.handleOrdini}>Ultimi ordini</button> : 
+//this.state.isChef ? <button className={style.ordine} onClick={this.handleOrdini}>Ordini in arrivo</button> :
+//<span />
+//}

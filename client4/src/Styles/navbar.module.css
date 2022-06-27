@@ -68,7 +68,7 @@ body{
          animation: fadein 2s
 }
 
-.menu{
+/*.menu{
     position: absolute;
     top: 30px;
     left:540px;
@@ -91,7 +91,7 @@ body{
  background-color: rgb(211, 133, 77) ;
  cursor: pointer;
 
-}
+}*/
 
 .logout{
     position: absolute;
@@ -116,10 +116,11 @@ body{
     background-color:  rgb(211, 133, 77);
     cursor: pointer;
 }
-.ordine{
+
+/*.ordine{
     position: absolute;
-    top: 30px;
-    left: 690px;
+    top: 27px;
+    left: 800px;
     width: 150px;
     height: 50px;
     font-weight: bold;
@@ -139,7 +140,7 @@ body{
 .ordine:hover{
     background-color:  rgb(211, 133, 77);
     cursor: pointer;
-}
+}*/
 
 
 
