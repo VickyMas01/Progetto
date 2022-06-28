@@ -45,12 +45,12 @@ export default class Admin extends React.Component{
 
 
      handleOther(prod) {
-        if(prod.source.innerHTML==='Aggiorna'){
+        if(prod.source.innerHTML==="aggiorna"){
             this.setState({
                 showUpdate:true,
                 formUpdate: <Form product={prod} hide={this.handleHide1} upd={true}/>
             });
-          document.getElementById("change").style.width="40vw"
+          document.getElementById("change").style.width="60vw"
         }else{
             prod.source.parentNode.parentNode.remove()
             Services.deleteProduct(prod._id)

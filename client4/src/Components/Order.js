@@ -1,4 +1,5 @@
 import React from 'react';
+import style from '../Styles/order.module.css'
 
 
 export default class Order extends React.Component{
@@ -46,16 +47,18 @@ export default class Order extends React.Component{
 
     render(){
         return(
+            <div  className={style.orderCard} >
             <li>
-                <div>User id: {this.props.user}</div>
-                <div>Prodotti: {this.props.products.join(', ')}</div>
-                <div>Status: {this.props.status}</div>
-                <div>{this.props.price}</div>
+                <div className={style.userId}>User id: {this.props.user}</div>
+                <div className={style.prdo}>Prodotti: {this.props.products.join(', ')}</div>
+                <div className={style.status}>Status: {this.props.status}</div>
+                <div className={style.price}>{this.props.price} € </div>
                 {this.props.acceptor ?<>
-                <button onClick={this.handleClick1}>Accetta</button>
-                <button onClick={this.handleClick2}>Rifiuta</button></>:
+                <button className={style.accept} onClick={this.handleClick1}>Accetta</button>
+                <button className={style.noAcc} onClick={this.handleClick2}>Rifiuta</button></>:
                     <button onClick={this.handleDel}>Termina ed elimina</button>}
             </li>
+            </div>
 
         )
     }

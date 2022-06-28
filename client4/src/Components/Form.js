@@ -39,7 +39,8 @@ export default class Form extends React.Component {
                     window.location.reload();
                 })
                 .catch(e => console.log(e))
-        }else{Services.createProduct(this.state)
+        }else{
+            Services.createProduct(this.state)
             .then(() =>{
                 window.location.reload();
             })
@@ -53,7 +54,7 @@ export default class Form extends React.Component {
     render() {
         return (
             <>
-                <span className={style.addTitle}>Aggiungi prodotto</span>
+                
                 <button className={style.close}onClick={this.handleClick}>X</button>
                 <form onSubmit={this.handleSubmit}>
                     <div className={style.name} >
@@ -105,7 +106,7 @@ export default class Form extends React.Component {
 
                     </div>
                     <div >
-                        <input className={style.submit} type="submit" value="Aggiungi" />
+                        <input id="pulse" className={style.submit} type="submit" value="Aggiorna"  />
                     </div>
                 </form>
             </>

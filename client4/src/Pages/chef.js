@@ -2,6 +2,8 @@ import React from 'react'
 import Header from "../Components/Header";
 import OrderList from "../Components/OrderList";
 import Services from "../Services/services";
+import style from '../Styles/chef.module.css'
+
 
 export default class Chef extends React.Component {
     constructor(props) {
@@ -45,10 +47,15 @@ export default class Chef extends React.Component {
                     <Header username={JSON.parse(sessionStorage.getItem('utente')).details.username}
                             isAdmin={JSON.parse(sessionStorage.getItem('utente')).isAdmin}
                             isChef={JSON.parse(sessionStorage.getItem('utente')).isChef}/>}
-                <ul>
+                             
+             <div id="changeChef" className={style.main}>
+                <span className={style.lastOrders}>Ultimi ordini</span>
+                <ul className={style.list}>
                     <OrderList onChange1={this.handleAccept} onChange2={this.handleRefuse} onChange3={this.handleDelete}/>
                 </ul>
-            </div>
+             </div>
+
+           </div>
         )
     }
 }

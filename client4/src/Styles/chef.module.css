@@ -1,0 +1,35 @@
+.main{
+    position: absolute;
+    top:120px;
+    left: 0px;
+    background-color: #ecf0f3 ;
+    width: 100vw;
+    height:1000px;
+    max-height: 100vh;
+    overflow-y: scroll;
+    border-radius: 50px;
+    overflow-x: visible;
+    display: flex;
+}
+
+.lastOrders{
+    position: absolute;
+    top: 25px;
+    left:10px;
+    font-size: 40px;
+    font-weight: bolder;
+    color:red;
+    margin-bottom: 20px;
+}
+
+.list{
+    position: absolute;
+    top:30px;
+    left: 100px;
+    display: flex;
+   list-style: none;
+ 
+ 
+}
+
+

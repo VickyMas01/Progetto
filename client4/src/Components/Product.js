@@ -51,14 +51,14 @@ export default class Product extends React.Component{
                 {this.props.admin ?
                     this.props.prod.disp ? <><div className={style.in}>Disponibile</div>
                             <div>
-                                <button className={style.edit} onClick={this.handleAdmin}/>
+                                <button className={style.edit} onClick={this.handleAdmin}>aggiorna</button>
                                 <button className={style.delete} onClick={this.handleAdmin}>X</button>
                             </div></>
                         :
                         <>
                         <div className={style.notIn}>Non disponibile</div>
                     <div>
-                        <button className={style.edit} onClick={this.handleAdmin}/>
+                        <button className={style.edit} onClick={this.handleAdmin}>aggiorna</button>
                         <button className={style.delete} onClick={this.handleAdmin}>X</button>
                     </div></>
 

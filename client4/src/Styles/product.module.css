@@ -123,6 +123,7 @@
     font-size: 25px;
     font-weight: bolder;
     color:white;
+    font-size: 0px;
     border-style: none;
     box-shadow: 0px 1px 1px 1px rgb(203, 166, 0);
     cursor:pointer;

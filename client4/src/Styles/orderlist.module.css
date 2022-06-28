@@ -1,0 +1,61 @@
+.orders{
+    position:absolute;
+    top:-20px;
+    right: -50px;
+    width: 300px;
+    height: 50px;
+    font-weight: bold;
+    font-size: larger;
+    border-width: 0px;
+    background-color: red;
+    color:white;
+    border-radius: 30px;
+
+    -webkit-animation: fadein 2s; 
+    -moz-animation: fadein 2s;
+     -ms-animation: fadein 2s; 
+      -o-animation: fadein 2s; 
+         animation: fadein 2s
+}
+.orders:hover{
+    background-color: rgb(211, 133, 77) ;
+    cursor: pointer;
+   
+}
+
+/*.sideOrd{
+    position: fixed;
+    right: 0px;
+    min-height: 15px;
+    max-height: 100vh;
+    overflow-y: scroll;
+    width: 40vw;
+    background: rgb(255, 255, 255);
+    border-radius: 50px;
+}*/
+
+
+
+
+
+
+
+
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+

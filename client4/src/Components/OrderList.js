@@ -1,6 +1,7 @@
 import React from 'react'
 import Services from '../Services/services'
 import Order from '../Components/Order'
+import style from '../Styles/orderlist.module.css'
 
 
 
@@ -64,9 +65,10 @@ export default class OrderList extends React.Component {
         const op = counter % 2;
         if (op === 1) {
             this.setState({hideComplete: false});
+            document.getElementById("changeChef").style="width:100vw";
         } else {
             this.setState({hideComplete: true});
-
+            document.getElementById("changeChef").style="width:60vw";
         }
 
     }
@@ -74,18 +76,26 @@ export default class OrderList extends React.Component {
 
     render() {
         return (
-            <div>
+            <>
+            <button className={style.orders} onClick={this.handleClick}>Ordini da completare/eliminare</button>
+            <div className={style.sideOrd}>
                 {this.state.orders1.length > 0 ?
                 this.state.orders1 :
                 <p>Nessun ordine nuovo</p>}
-                <button onClick={this.handleClick}>Mostra ordini da completare ed eliminare</button>
+               
                 {this.state.hideComplete ? <></> :
                 this.state.orders2.length > 0 ?
                     this.state.orders2 :
                     <p>Nessun ordine da confermare</p>}
             </div>
 
+            </>
+
         )
     }
+
+    
 }
+
+
 
