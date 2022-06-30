@@ -54,9 +54,9 @@ export default class Order extends React.Component{
                 <div className={style.status}>Status: {this.props.status}</div>
                 <div className={style.price}>{this.props.price} € </div>
                 {this.props.acceptor ?<>
-                <button className={style.accept} onClick={this.handleClick1}>Accetta</button>
-                <button className={style.noAcc} onClick={this.handleClick2}>Rifiuta</button></>:
-                    <button onClick={this.handleDel}>Termina ed elimina</button>}
+                <button className={style.accept} onClick={this.handleAcc}>Accetta</button>
+                <button className={style.noAcc} onClick={this.handleRef}>Rifiuta</button></>:
+                    <button className={style.end} onClick={this.handleDel}>Termina ed elimina</button>}
             </li>
             </div>
 

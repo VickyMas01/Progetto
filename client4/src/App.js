@@ -5,6 +5,7 @@ import Route from './Components/Route';
 import Admin from './Pages/admin';
 import Chef from './Pages/chef';
 import Client from './Pages/client';
+import style from './Styles/App.css'
 
 
 

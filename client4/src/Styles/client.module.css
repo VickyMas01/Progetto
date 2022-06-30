@@ -47,9 +47,9 @@ cursor: pointer;
 
 }
 .agree{
-    position: relative;
+    position: absolute;
     top:58px;
-    right:-80px;
+    right:20px;
     height: 50px;
     width: 150px;
     border-style: none;
@@ -65,10 +65,10 @@ cursor: pointer;
 }
 
 .cartSection{
-    position: fixed;
-    right: 0px;
+    position: absolute;
+    right: -614px;
     min-height: 15px;
-    max-height: 100vh;
+    max-height:max-content;
     overflow-y: scroll;
     width: 40vw;
     background: rgb(255, 255, 255);
@@ -162,10 +162,10 @@ cursor: pointer;
     background-color: #ecf0f3 ;
     width: 100vw;
     height:1000px;
-    max-height: 100vh;
+    max-height: max-content;
     overflow-y: scroll;
     border-radius: 50px;
-    overflow-x: visible;
+    overflow: visible;
 }
 #change{
     position: absolute;

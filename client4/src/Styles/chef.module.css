@@ -5,10 +5,9 @@
     background-color: #ecf0f3 ;
     width: 100vw;
     height:1000px;
-    max-height: 100vh;
-    overflow-y: scroll;
+    max-height: max-content;
     border-radius: 50px;
-    overflow-x: visible;
+    overflow:visible;
     display: flex;
 }
 
@@ -28,7 +27,6 @@
     left: 100px;
     display: flex;
    list-style: none;
- 
  
 }
 

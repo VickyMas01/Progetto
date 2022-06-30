@@ -55,7 +55,7 @@ export default class Form extends React.Component {
         return (
             <>
                 
-                <button className={style.close}onClick={this.handleClick}>X</button>
+                <button className={style.close} onClick={this.handleClick}>X</button>
                 <form onSubmit={this.handleSubmit}>
                     <div className={style.name} >
                         <label htmlFor='title'>Nome prodotto </label>
@@ -73,7 +73,7 @@ export default class Form extends React.Component {
                     <div className={style.desc}>
                         <label htmlFor='description'>Descrizione</label>
                         <br/>
-                        <textarea className={style.dIn} placeholder="Descrizione"  required onChange={this.handleChange} id='desc' name="desc" maxlength='30'>{this.state.desc}</textarea>
+                        <textarea className={style.dIn} placeholder="Descrizione"  required onChange={this.handleChange} id='desc' name="desc" maxLength='30'>{this.state.desc}</textarea>
                     </div>
                     <br/>
                     <div className={style.urlPh}>

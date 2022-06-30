@@ -1,7 +1,7 @@
 .orders{
     position:absolute;
     top:-20px;
-    right: -50px;
+    right: -600px;
     width: 300px;
     height: 50px;
     font-weight: bold;
@@ -23,17 +23,35 @@
    
 }
 
-/*.sideOrd{
-    position: fixed;
-    right: 0px;
-    min-height: 15px;
-    max-height: 100vh;
-    overflow-y: scroll;
+.sideOrd{
+    position: absolute;
+    top: -45px;
+    right: -1396px;
+    min-height: 0px;
+    max-height: max-content;
     width: 40vw;
     background: rgb(255, 255, 255);
     border-radius: 50px;
-}*/
+}
 
+
+.newOrd{
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+}
+.newOrd2{
+    position: absolute;
+    top:80px;
+    width: 200px;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.noOrd{
+    font-size: larger;
+    font-weight: bold;
+}
 
 
 

@@ -12,7 +12,24 @@ export default class Chef extends React.Component {
 
         this.handleAccept = this.handleAccept.bind(this)
         this.handleRefuse = this.handleRefuse.bind(this)
+        this.handleCheck = this.handleCheck.bind(this)
 
+    }
+
+    componentDidMount(){
+        return this.handleCheck();
+    }
+
+    handleCheck(){
+        Services.checkAuth()
+        .then((res =>{
+            if(!res.ok){
+                window.history.pushState({},"",'/');
+                const pop= new PopStateEvent('popstate');
+                window.dispatchEvent(pop)
+            } return res.text()
+        }))
+        .catch(error => error)
     }
 
     handleAccept(order) {
